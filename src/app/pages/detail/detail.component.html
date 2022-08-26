@@ -1,0 +1,111 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-5 mt-5">
+            <div class="anh-to">
+                <img src="http://hotcoffee-html.themerex.net/images/americano-600x600.jpg" alt="">
+                <div class="mt-3 mb-4 anh-nho">
+                    <img src="http://hotcoffee-html.themerex.net/images/croissant-180x180.jpg" alt="">
+                    <img src="http://hotcoffee-html.themerex.net/images/panini-180x180.jpg" alt="">
+                    <img src="http://hotcoffee-html.themerex.net/images/panini-180x180.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <!--end p1-->
+        <div class="col-lg-4 pro mt-5">
+            <h2>Americano</h2>
+            <span class="gia">$10.00</span>
+            <span class="sale-price">$7.00</span>
+            <p class="mt-3">Maecenas et nunc augue. Duis convallis nulla augue, vel pretium quam mattis nec.
+                Pellentesque dapibus
+                faucibus lacus quis feugiat.</p>
+            <div class="row mt-4">
+                <div class="input mb-4">
+                    <button class="btn-fake left" id="tru">-</button>
+                    <input type="text" name="" id="kq" value="1">
+                    <button class="btn-fake right" id="cong">+</button>
+                </div>
+            </div>
+            <div class="row button mb-4">
+                <button class="cart">ADD TO CART</button>
+                <button class="buy">BUY</button>
+            </div>
+            <p>Category: Bakery</p>
+            <p>Product ID: B140</p>
+        </div>
+        <!--end p2-->
+        <div class="col-lg-3 mt-5">
+            <div class="category">
+                <h4>CATEGORIES</h4>
+                <hr>
+                <div class="cate">
+                    <ul>
+                        <li class="mb-3"><a href="">BAKERY</a></li>
+                        <li class="mb-3"><a href="">BAKERY</a></li>
+                        <li class="mb-3"><a href="">BAKERY</a></li>
+                        <li class="mb-3"><a href="">BAKERY</a></li>
+                        <li><a href="">BAKERY</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="top-rated mt-4">
+                <h4>TOP RATED PRODUCTS</h4>
+                <hr>
+                <div class="row" *ngFor="let item of topPro">
+                    <div class="img mb-3">
+                        <img src="{{item.img}}" alt="">
+                    </div>
+                    <div class="name ml-2">
+                        <span>{{item.name}}</span>
+                    </div>
+                    <div class="price">
+                        <div class="price">
+                            <span>${{item.price}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="follow mt-4">
+                <h4>FOLLOW US</h4>
+                <hr>
+                <div class="social-icon">
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-pinterest"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--end p3-->
+    </div>
+    <div class="col-lg-9 mb-4">
+        <div class="menu">
+            <ul>
+                <li><a href="" class="active">Description</a></li>
+                <li><a href="" routerLink="/review">Review(0)</a></li>
+            </ul>
+        </div>
+        <hr>
+        <div class="description">
+            <h4>PRODUCT DESCRIPTION</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda obcaecati nisi officia nihil id
+                incidunt
+                omnis reprehenderit pariatur quae dolores doloribus qui molestias voluptate quos, unde temporibus
+                beatae!
+                Obcaecati, et?</p>
+        </div>
+        <div class="review">
+            <h4>REVIEWS</h4>
+            <label>Your rating</label>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Your review</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3" *ngFor="let item of list">
+                <div class="card cur mt-5" routerLink="/detail/{{item.id}}">
+                    <img class="card-img-top" width="300px" height="250px" src="{{item.img}}" alt="">
+                    <div class="card-body bg-light">
+                        <h4 class="card-title text-center prod_name">{{item.prod_name}}</h4>
+                        <div class="prices d-flex text-center justify-content-around">
+                            <p class="product-price">
+                                {{item.price}} $
+                            </p>
+                        </div>
+                        <div class="icon text-center">
+                            <i routerLink="/" class="fa-solid cur fa-heart pr-4"></i>
+                            <i routerLink="/cart" class="fa-solid cur fa-basket-shopping pr-4"></i>
+                            <i routerLink="/detail/{{item.id}}" class="fa-solid cur fa-search "></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer></app-footer>
